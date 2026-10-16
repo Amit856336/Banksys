@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amt_Bank</title>
+    <link rel="stylesheet" href="bank.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="body">
+  <div class="back"></div>
+      <div class="baar">
+        <a class="home" href="">Home</a>
+        <a class="sign" href="">Sign Up</a>
+        <a class="login" href="">Login</a>
+        <a href="#">About</a>
+          <a href="#">Contact us</a>
+      </div>
+    <div class="alert alert-warning alert-dismissible fade show  alerts removealert"><h6>your subscription is closed in 3 days</h6><button class="btn-close clr"></button></div>
+ 
+  <i class="bi bi-list hum" id="hum"></i>
+  <div class="maincontent">
+    <header class="header">
+     
+      <div class="heading">
+        
+<i class="bi bi-bank fs-1" id="hello"></i>
+        <h2 class="innerh1">
+          &nbsp;Amt_Bank Lucknow<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&emsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;
+          <span style="color: yellow;">By Amit Dev</span>
+        </h2>
+
+      </div>
+
+     
+      <div class="nav_links">
+        <a class="home" href="">Home</a>
+        <a class ="sign" href="">Sign Up</a>
+        <a class ="login" href="">Login</a>
+        <a href="#">About</a>
+          <a href="#">Contact us</a>
+      </div>
+  </header>
+  
+    <main class=" hidden" id="main">
+   
+      <section>
+      <div class="slide">
+        <div class="slider">
+        <div class="img"><img src="./images/1.png"></div>
+         <div class="img"><img src="./images/2.jpg"></div>
+         <div class="img"><img src="./images/3.jpg"></div>
+         <div class="img"><img src="./images/4.jpg"></div>
+         <div class="img"><img src="./images/5.jpg"></div>
+         <div class="img"><img src="./images/6.jpg"></div>
+      </div>
+      </div>
+        </section>
+        
+      <section class="d-flex mt-3 p-1 bg-light overflow-hidden justify-content-center align-items-center container-fluid classcontainer">
+        <div class="row g-3 g-md-6 classrow">
+        <div class="card card-primary col-6 col-md-4 crd w-90">
+          <div class="card-body bg-primary d-flex flex-column rounded-2">
+            <h3 class="card-title fw-bold">Open Account</h3>
+            <p class="card-text fw-bold">Open a new Account and use our services.</p>
+          </div>
+        </div>
+         <div class="card card-primary col-6 col-md-4 crd">
+          <div class="card-body bg-primary d-flex flex-column rounded">
+            <h3 class="card-title fw-bold">Login</h3>
+            <p class="card-text fw-bold">Login in your Account.</p>
+          </div>
+        </div>
+         <div class="card card-primary col-6 col-md-4 crd">
+          <div class="card-body bg-primary d-flex flex-column rounded">
+            <h3 class="card-title fw-bold">Withdraw Money</h3>
+            <p class="card-text fw-bold">Withdraw Money from your Account.</p>
+          </div>
+        </div>
+         <div class="card card-primary col-6 col-md-4 crd">
+          <div class="card-body bg-primary d-flex flex-column rounded">
+            <h3 class="card-title fw-bold">Credit Money</h3>
+            <p class="card-text fw-bold">Credit money in your Account.</p>
+          </div>
+        </div>
+         <div class="card card-primary col-6 col-md-4 crd">
+          <div class="card-body bg-primary d-flex flex-column rounded">
+            <h3 class="card-title fw-bold">Make Tranjection</h3>
+            <p class="card-text fw-crd">Send Money in Another Account.</p>
+          </div>
+        </div>
+         <div class="card card-primary col-6 col-md-4 crd">
+          <div class="card-body bg-primary d-flex flex-column">
+            <h3 class="card-title fw-bold">Show History</h3>
+            <p class="card-text fw-bold">Show your tranjections history.</p>
+          </div>
+        </div>
+        
+        </div>
+      </section>
+    
+    </main>
+  
+  
+    <div class="modal fade" id="mdl">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Your Tranjection History</h3>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body mymodal">
+            <ul class="list">
+             
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary ms-5" data-bs-dismiss="modal">close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="screen-login" class="screen hidden">
+    <h1 class="fw-bold fs-1 text-warning">Login</h1>
+    <input class="p-1 border-1 inp" id="loginAccNo" placeholder="Account No">
+    <input class="p-1 inp" id="loginPin" placeholder="PIN">
+    <button class="px-1 fw-bold bg-success btn" id="loginBtn">Login</button>
+    <button class="px-1 fw-bold bg-danger btn sign" id="goToSignupBtn">New Account</button>
+  </div>
+  <div id="screen-signup" class="screen hidden">
+    <h1>Signup</h1>
+    <input type="text" class="inp" id="signupName" placeholder="Enter Naam" required>
+    <input type="number" class="inp" id="signupAadhar" placeholder="Enter Aadhar Number" required>
+    <input type="number" class="inp" id="signupPin" placeholder=" Enter Four digit PIN" required>
+    <button class="btn fw-bold bg-primary" id="signupBtn">Create</button>
+    <button class="btn fw-bold bg-warning login" id="goToLoginBtn">Back</button>
+  </div>
+
+  <div id="screen-dashboard" class="screen hidden">
+    <div class="history d-flex">
+      <div class="data ms-1">
+    <h1 class="userName"><span class="text-dark fw-bold">Hi</span>, <span id="userName" class="text-warning"></span></h1>
+         <h2 class="balanceacc"> <span class=" fw-bold text-dark">Account No:</span><span id="accnc" class="text-warning"></span></h2>
+    <h2 class="balancenow"><span class=" fw-bold text-dark">Balance</span>: ₹<span id="balance" class="text-warning">0</span></h2>
+        
+    </div>
+    <div class="historybutton" data-bs-toggle="modal" data-bs-target="#mdl">history</div>
+    </div>
+    <input class="inp"id="amount" placeholder="Amount">
+    <div class="buttons d-flex;">
+    <button class="btn bg-primary" id="depositBtn">Deposit</button>
+    <button class = "btn bg-warning" id="withdrawBtn">Withdraw</button>
+    <button class="btn bg-danger" id="logoutBtn">Logout</button>
+  </div>
+
+  </div>
+
+<footer class="ft">
+    <div class="mainfooter">
+      <h2>Important Links</h2>
+            <a href="#">Home</a>
+            <a href="#">Weather</a>
+            <a href="#">About</a>
+        </div>
+    <div class="mainfooter">
+      <h2>Contant details</h2>
+            <p>Mobile no. 8429609084</p>
+            <p>Email. amitk372661@gmail.com</p>
+            <p>This Web App provide A bank System to Users</p>
+        </div>
+    <div class="mainfooter">
+      <p class="special">@ Weather Plateform. All Rights Reserved</p>
+        </div>
+    </div>
+  </footer>
+    <script src="bank.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
